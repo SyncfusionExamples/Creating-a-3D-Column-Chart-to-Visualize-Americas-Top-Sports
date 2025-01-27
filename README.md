@@ -1,4 +1,4 @@
-# Creating a 3D Column Chart to Visualize Americas Top Sports
+![americasports](https://github.com/user-attachments/assets/d50715ba-ec18-4e44-bd1c-183933e4bf08)# Creating a 3D Column Chart to Visualize Americas Top Sports
 This sample demonstrates how to create a MAUI Column Chart using SfCartesianChart from Syncfusion Charts to analyze the popularity of America’s top 10 sports. 
 
 One of the unique features of the Column Chart is its ability to effectively illustrate variations in fan support. For instance, football, represented by the tallest column, signifies its dominant popularity among American sports fans. In contrast, a shorter column for tennis highlights its niche appeal with a smaller fan base.
@@ -14,7 +14,7 @@ Syncfusion [Maui Column Chart](https://help.syncfusion.com/maui/cartesian-charts
 
 After executing these code examples, we will get the output that resembles the following image.
 
-![America'sports]()
+![Americasports](https://github.com/user-attachments/assets/a51f12dd-ae1f-47ec-90d8-f71f3a7892a1)
 
 ## Troubleshooting
 Path too long exception
