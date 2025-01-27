@@ -95,10 +95,4 @@
 		<PackageReference Include="Syncfusion.Maui.Charts" Version="*" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
-	  <PackageReference Include="Xam.Plugins.Android.ExoPlayer">
-	    <Version>2.19.1</Version>
-	  </PackageReference>
-	</ItemGroup>
-
 </Project>
