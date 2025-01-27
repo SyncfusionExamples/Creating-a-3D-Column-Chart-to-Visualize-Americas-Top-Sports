@@ -3,16 +3,18 @@ This sample demonstrates how to create a MAUI Column Chart using SfCartesianChar
 
 One of the unique features of the Column Chart is its ability to effectively illustrate variations in fan support. For instance, football, represented by the tallest column, signifies its dominant popularity among American sports fans. In contrast, a shorter column for tennis highlights its niche appeal with a smaller fan base.
 
-## Key features of the Syncfusion MAUI Bubble chart
-The key features of the bubble chart customization include chart features such as chart title, axis customization and tooltip customization.
+## Key features of the Syncfusion MAUI Column chart
+The key features of the Column chart include chart features such as chart title, and Column Series customization.
 
 ### Chart title customization:
-Title property in the Syncfusion MAUI Chart plays a vital role in improving the chart's clarity and context. It enables you to set a descriptive title that effectively communicates the purpose or theme of the visualization, helping users easily grasp the data being showcased.
+[Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property in the Syncfusion MAUI Chart plays a vital role in improving the chart's clarity and context. It enables you to set a descriptive title that effectively communicates the purpose or theme of the visualization, helping users easily grasp the data being showcased.
 
-### Tooltip customization
-Syncfusion charts offer powerful customization options for tooltips, enhancing data visualization and user engagement. Tooltips can display detailed insights for each data point, providing clarity on the underlying information. In the example below, tooltips are customized to showcase specific metrics related to fan support for America’s Top 10 Most Popular Sports
+### Column Series customization
+Syncfusion [Maui Column Chart](https://help.syncfusion.com/maui/cartesian-charts/column) provides advanced customization options, enabling developers to create visually compelling representations of data. Using the Column3D class, the chart delivers a 3D perspective, adding depth and realism to the columns. This customization effectively highlights the chart's interactivity and visual appeal.
 
 After executing these code examples, we will get the output that resembles the following image.
+
+![America'sports]()
 
 ## Troubleshooting
 Path too long exception

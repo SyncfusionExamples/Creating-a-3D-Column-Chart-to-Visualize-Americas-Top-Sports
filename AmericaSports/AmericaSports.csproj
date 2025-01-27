@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
 
@@ -56,11 +56,8 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\america.png" />
-	  <None Remove="Resources\Images\america1.jpg" />
-	  <None Remove="Resources\Images\america2.png" />
 	  <None Remove="Resources\Images\americanfootball.png" />
 	  <None Remove="Resources\Images\baseball.png" />
-	  <None Remove="Resources\Images\baseketballlogo.png" />
 	  <None Remove="Resources\Images\basketball.png" />
 	  <None Remove="Resources\Images\boxinggloves.png" />
 	  <None Remove="Resources\Images\dotnet_bot.png" />
@@ -68,24 +65,15 @@
 	  <None Remove="Resources\Images\hockeystick.png" />
 	  <None Remove="Resources\Images\lifting.png" />
 	  <None Remove="Resources\Images\racingcar.png" />
-	  <None Remove="Resources\Images\soccerball.png" />
 	  <None Remove="Resources\Images\soccerplayer.png" />
 	  <None Remove="Resources\Images\tennis.png" />
 	  <None Remove="Resources\Images\usaflag.mp4" />
-	  <None Remove="Resources\Images\wrestling.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Resources\Images\usaflag.mp4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiImage Include="Resources\Images\america.png" />
-	  <MauiImage Include="Resources\Images\america1.jpg" />
-	  <MauiImage Include="Resources\Images\america2.png" />
 	  <MauiImage Include="Resources\Images\americanfootball.png" />
 	  <MauiImage Include="Resources\Images\baseball.png" />
-	  <MauiImage Include="Resources\Images\baseketballlogo.png" />
 	  <MauiImage Include="Resources\Images\basketball.png" />
 	</ItemGroup>
 
@@ -96,21 +84,18 @@
 	  <MauiImage Include="Resources\Images\hockeystick.png" />
 	  <MauiImage Include="Resources\Images\lifting.png" />
 	  <MauiImage Include="Resources\Images\racingcar.png" />
-	  <MauiImage Include="Resources\Images\soccerball.png" />
 	  <MauiImage Include="Resources\Images\soccerplayer.png" />
 	  <MauiImage Include="Resources\Images\tennis.png" />
-	  <MauiImage Include="Resources\Images\wrestling.png" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="4.1.2" />
+	<ItemGroup> 
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
-		<PackageReference Include="Syncfusion.Maui.Charts" Version="28.1.36" />
+		<PackageReference Include="Syncfusion.Maui.Charts" Version="*" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
 	  <PackageReference Include="Xam.Plugins.Android.ExoPlayer">
 	    <Version>2.19.1</Version>
 	  </PackageReference>

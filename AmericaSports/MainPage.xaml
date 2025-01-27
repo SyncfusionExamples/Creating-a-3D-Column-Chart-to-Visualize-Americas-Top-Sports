@@ -3,8 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts" 
              xmlns:model="clr-namespace:AmericaSports"
-                 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-       
              x:Class="AmericaSports.MainPage">
 
    <Grid BackgroundColor="Black">
@@ -15,12 +13,9 @@
                   <RowDefinition Height="*"/>
                   <RowDefinition Height="30"/>
               </Grid.RowDefinitions>
-                <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
-                <!--<Grid Grid.Row="0">
-                    <toolkit:MediaElement ShouldLoopPlayback="True" Source="C:\Users\HarshaMidadhalaKhaja\source\repos\AmericaSports\AmericaSports\Resources\Images\usaflag.mp4" BackgroundColor="Yellow" Background="White" Aspect="AspectFill" Margin="0,55,0,0"  x:Name="test" Loaded="MediaElement_Loaded" ShouldAutoPlay="True" Opacity="0.85"
-ShouldShowPlaybackControls="False" />
-                   
-                </Grid>-->
+                <Grid.BindingContext>
+                    <model:AmericaSportsViewModel x:Name="viewModel"/> 
+                </Grid.BindingContext>
               <chart:SfCartesianChart Grid.Row="0" Margin="0,0,0,20"  HorizontalOptions="Fill"  VerticalOptions="FillAndExpand" BackgroundColor="Black" Background="Transparent">
                   <chart:SfCartesianChart.Title>
                       <Grid>
@@ -37,25 +32,16 @@ ShouldShowPlaybackControls="False" />
                               <Label Text="A Comparative Analysis Across Different Sports based on fans support" FontSize="{OnPlatform Android=10,Default=13,iOS=10}" TextColor="LightGray" Margin="0,2,0,0"/>
                           </StackLayout>
                       </Grid>
-                  </chart:SfCartesianChart.Title> 
-                  
-                  
-                  <chart:SfCartesianChart.PlotAreaBackgroundView>
+                  </chart:SfCartesianChart.Title>
+
+                    <chart:SfCartesianChart.PlotAreaBackgroundView>
                         <Grid>
-                            <Image x:Name="FlagImage" Source="america.png"  Opacity="0.32" Aspect="Fill"  />
-                         
+                            <Image x:Name="FlagImage" Source="america.png"  Opacity="0.32" Aspect="Fill" HeightRequest="{OnPlatform Android=200,iOS=200}" WidthRequest="{OnPlatform Android=760,iOS=650}" Margin="20,0,0,0"  />
+
                         </Grid>
                     </chart:SfCartesianChart.PlotAreaBackgroundView>
-                  
-                  
-                  <chart:SfCartesianChart.BindingContext>
-                      <model:AmericaSportsViewModel x:Name="viewModel"/>
-                  </chart:SfCartesianChart.BindingContext>
-
-                  <chart:SfCartesianChart.TooltipBehavior>
-                      <chart:ChartTooltipBehavior/>
-                  </chart:SfCartesianChart.TooltipBehavior> 
-                  <chart:SfCartesianChart.XAxes>
+  
+                    <chart:SfCartesianChart.XAxes>
                         <chart:CategoryAxis EdgeLabelsDrawingMode="Shift" IsVisible="False" ShowMajorGridLines="False">
                         </chart:CategoryAxis>
                   </chart:SfCartesianChart.XAxes>
@@ -64,20 +50,7 @@ ShouldShowPlaybackControls="False" />
                         <chart:NumericalAxis  EdgeLabelsDrawingMode="Center" IsVisible="False" EdgeLabelsVisibilityMode="AlwaysVisible" Maximum="{OnPlatform Android=240, Default=180, iOS=240}"  Minimum="0" 
                                             PlotOffsetEnd="5" ShowMajorGridLines="False">
                         </chart:NumericalAxis>
-                  </chart:SfCartesianChart.YAxes>
-                    <chart:SfCartesianChart.ZoomPanBehavior>
-                        <chart:ChartZoomPanBehavior MaximumZoomLevel="1" EnableSelectionZooming="True"/>
-                    </chart:SfCartesianChart.ZoomPanBehavior>
-                  <!--<chart:SfCartesianChart.Annotations>
-
-                      <chart:ViewAnnotation X1="0" Y1="20">
-                          <chart:ViewAnnotation.View>
-                              <Image Source="wrestling.png" HeightRequest="40" WidthRequest="50"/>
-                          </chart:ViewAnnotation.View>
-                      </chart:ViewAnnotation>
-
-
-                  </chart:SfCartesianChart.Annotations>-->
+                  </chart:SfCartesianChart.YAxes> 
 
                   <model:Column3D XBindingPath="Name"    EnableTooltip="True"   PaletteBrushes="{Binding PaletteBrushes}"  Spacing="0.4"
                      YBindingPath="Value"  ShowDataLabels="True"
@@ -116,10 +89,7 @@ ShouldShowPlaybackControls="False" />
                   </model:Column3D>
               </chart:SfCartesianChart>
 
-              <Grid Grid.Row="1" HorizontalOptions="Center">
-                  <Grid.BindingContext>
-                      <model:AmericaSportsViewModel/>
-                  </Grid.BindingContext>
+              <Grid Grid.Row="1" HorizontalOptions="Center"> 
                   <CollectionView ItemsSource="{Binding SportsData}">
                       <CollectionView.ItemTemplate>
                           <DataTemplate>
@@ -147,6 +117,5 @@ ShouldShowPlaybackControls="False" />
         </Border>
 
   </Grid>
-  
-
+   
 </ContentPage>
