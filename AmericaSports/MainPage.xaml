@@ -16,7 +16,7 @@
                 <Grid.BindingContext>
                     <model:AmericaSportsViewModel x:Name="viewModel"/> 
                 </Grid.BindingContext>
-              <chart:SfCartesianChart Grid.Row="0" Margin="0,0,0,20"  HorizontalOptions="Fill"  VerticalOptions="FillAndExpand" BackgroundColor="Black" Background="Transparent">
+                <chart:SfCartesianChart Grid.Row="0" Margin="{OnPlatform Default='0,0,0,20', iOS=0,Android=0}"  HorizontalOptions="Fill"  VerticalOptions="FillAndExpand" BackgroundColor="Black" Background="Transparent">
                   <chart:SfCartesianChart.Title>
                       <Grid>
                           <Grid.RowDefinitions>
@@ -36,7 +36,7 @@
 
                     <chart:SfCartesianChart.PlotAreaBackgroundView>
                         <Grid>
-                            <Image x:Name="FlagImage" Source="america.png"  Opacity="0.32" Aspect="Fill" HeightRequest="{OnPlatform Android=200,iOS=200}" WidthRequest="{OnPlatform Android=760,iOS=650}" Margin="20,0,0,0"  />
+                            <Image x:Name="FlagImage" Source="america.png"  Opacity="0.2" Aspect="Fill" Margin="{OnPlatform Android='20,-20,0,0', iOS='20,-20,0,0', Default='0'}"  />
 
                         </Grid>
                     </chart:SfCartesianChart.PlotAreaBackgroundView>
