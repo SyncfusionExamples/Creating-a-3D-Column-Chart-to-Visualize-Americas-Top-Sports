@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
-using CommunityToolkit.Maui;
-
-using CommunityToolkit.Maui;
+using Syncfusion.Maui.Core.Hosting; 
 namespace AmericaSports
 {
     public static class MauiProgram
@@ -11,8 +8,7 @@ namespace AmericaSports
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
-                .UseMauiCommunityToolkitMediaElement()
+                .UseMauiApp<App>() 
                 .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {

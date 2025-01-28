@@ -1,5 +1,4 @@
-﻿
-using CommunityToolkit.Maui.Views;
+﻿ 
 using Syncfusion.Maui.Charts; 
 namespace AmericaSports
 {

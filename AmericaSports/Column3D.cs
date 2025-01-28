@@ -54,9 +54,8 @@ namespace AmericaSports
                 topTriangle.LineTo(Right, Top);
                 topTriangle.LineTo(Left, Top);
                 topTriangle.Close();
-
-                var topColor = mainColor.WithAlpha(0.6f);
-                canvas.SetFillPaint(new SolidColorBrush(topColor), new Rect() { Left = Left, Top = Top, Right = Right + depthOffset, Bottom = Top });
+                 
+                canvas.SetFillPaint(new SolidColorBrush(sideColor), new Rect() { Left = Left, Top = Top, Right = Right + depthOffset, Bottom = Top });
                 canvas.FillPath(topTriangle);
             }
         }
