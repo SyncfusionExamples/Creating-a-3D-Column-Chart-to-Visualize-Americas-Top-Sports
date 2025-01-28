@@ -14,7 +14,8 @@ Syncfusion [Maui Column Chart](https://help.syncfusion.com/maui/cartesian-charts
 
 After executing these code examples, we will get the output that resembles the following image.
 
-![Americasports](https://github.com/user-attachments/assets/a51f12dd-ae1f-47ec-90d8-f71f3a7892a1)
+ ![AmericaSports](https://github.com/user-attachments/assets/76d268e2-8eae-4a71-81e2-cfe437dcedba)
+
 
 ## Troubleshooting
 Path too long exception
